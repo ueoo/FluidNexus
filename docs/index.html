@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="keywords" content="Fluid Reconstruction, Single Video, Dynamics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FluidNexus</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/video-gallery.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/d383128d10.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/fontawesome.min.js"></script>
+    <script src="static/js/video-gallery.js"></script>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">FluidNexus: 3D Fluid Reconstruction and Prediction <br> from
+                            a Single Video</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="https://yuegao.me" target="_blank">Yue Gao</a><sup>*</sup><sup>1,2</sup>&nbsp&nbsp&nbsp&nbsp
+                            </span>
+                            <span class="author-block">
+                                <a href="https://kovenyu.com/" target="_blank">Hong-Xing "Koven" Yu</a><sup>*</sup><sup>1</sup>&nbsp&nbsp&nbsp&nbsp
+                            </span>
+                            <span class="author-block">
+                                <a href="https://faculty.cc.gatech.edu/~bozhu/" target="_blank">Bo Zhu</a><sup>3</sup>&nbsp&nbsp&nbsp&nbsp
+                            </span>
+                            <span class="author-block">
+                                <a href="https://jiajunwu.com/" target="_blank">Jiajun Wu</a><sup>1</sup>&nbsp&nbsp&nbsp&nbsp
+                            </span>
+                            <br>
+                            <sup>1</sup>Stanford University &nbsp&nbsp
+                            <sup>2</sup>Microsoft &nbsp&nbsp
+                            <sup>3</sup>Georgia Institute of Technology &nbsp&nbsp
+                            <br>
+                            <p><sup>*</sup>Contributed Equally</p>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- ArXiv PDF link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2503.00000" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- ArXiv Abstract Link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2503.00000" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+
+                                <!-- Code link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/ueoo/FluidNexus" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fab fa-github"></i></span>
+                                        <span>Code (coming soon)</span>
+                                    </a>
+                                </span>
+
+                                <!-- Data link -->
+                                <span class="link-block">
+                                    <a href="" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon"><i class="fa-solid fa-database"></i></span>
+                                        <span>Data (coming soon)</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- teaser -->
+    <section class="hero teaser">
+        <div class="hero-body">
+            <div class="container">
+                <figure class="image">
+                    <img src="static/images/teaser.png" alt="Teaser">
+                    <video muted loop autoplay playsinline webkit-playsinline>
+                        <source src="static/videos/teaser.mp4" type="video/mp4">
+                    </video>
+                    <!-- <figcaption class="mt-3">
+                        From a single fluid video, FluidNexus reconstructs the 3D fluid, predict future evolution, and simulate wind-fluid interaction / object-fluid interactions.
+                    </figcaption> -->
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--End teaser -->
+
+    <!-- Novel View Synthesis -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2">Novel View Synthesis</h2>
+                <div class="video-gallery-buttons" id="gallery-buttons-nvs">
+                    <button class="button is-two-line is-primary" data-video-index="0">
+                        <p>FluidNexus-Smoke <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="1">
+                        <p>FluidNexus-Smoke <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="2">
+                        <p>FluidNexus-Smoke <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="3">
+                        <p>FluidNexus-Smoke <br> Novel View D</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="4">
+                        <p>FluidNexus-Ball <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="5">
+                        <p>FluidNexus-Ball <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="6">
+                        <p>FluidNexus-Ball <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="7">
+                        <p>FluidNexus-Ball <br> Novel View D</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="8">
+                        <p>ScalarFlow <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="9">
+                        <p>ScalarFlow <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="10">
+                        <p>ScalarFlow <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="11">
+                        <p>ScalarFlow <br> Novel View D</p>
+                    </button>
+                </div>
+                <figure class="image">
+                    <figcaption>
+                    From a <b>single input video</b>, we reconstruct the fluid and show novel view synthesis results below. We show two novel views for each dataset example.
+                </figcaption>
+                </figure>
+                <div class="video-gallery-carousel" id="gallery-carousel-nvs">
+                    <div class="video-gallery-item active">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_blue_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_blue_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_blue_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_blue_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_red_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_red_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_red_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_red_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_scalar_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_scalar_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_scalar_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/nvs_scalar_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Novel View Synthesis-->
+
+
+    <!-- Future Prediction -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2">Future Prediction</h2>
+
+                <div class="video-gallery-buttons is-wide" id="gallery-buttons-fut">
+                    <button class="button is-two-line is-primary" data-video-index="0">
+                        <p>FluidNexus-Ball <br> Input View</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="1">
+                        <p>FluidNexus-Ball <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="2">
+                        <p>FluidNexus-Ball <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="3">
+                        <p>FluidNexus-Ball <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="4">
+                        <p>FluidNexus-Ball <br> Novel View D</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="5">
+                        <p>FluidNexus-Smoke <br> Input View</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="6">
+                        <p>FluidNexus-Smoke <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="7">
+                        <p>FluidNexus-Smoke <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="8">
+                        <p>FluidNexus-Smoke <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="9">
+                        <p>FluidNexus-Smoke <br> Novel View D</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="10">
+                        <p>ScalarFlow <br> Input View</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="11">
+                        <p>ScalarFlow <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="12">
+                        <p>ScalarFlow <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="13">
+                        <p>ScalarFlow <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="14">
+                        <p>ScalarFlow <br> Novel View D</p>
+                    </button>
+                </div>
+
+                <div class="video-gallery-carousel" id="gallery-carousel-fut">
+                    <div class="video-gallery-item active">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_red_view02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_red_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_red_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_red_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_red_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_blue_view02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_blue_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_blue_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_blue_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 60 frames (2 seconds) are reconstruction, the last 60 frames (2 seconds) are future
+                                prediction.
+                            </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_blue_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 30 frames (1 second) are reconstruction, the last 30 frames (1 second) are future
+                                prediction.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_scalar_view02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 30 frames (1 second) are reconstruction, the last 30 frames (1 second) are future
+                                prediction.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_scalar_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 30 frames (1 second) are reconstruction, the last 30 frames (1 second) are future
+                                prediction.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_scalar_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 30 frames (1 second) are reconstruction, the last 30 frames (1 second) are future
+                                prediction.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_scalar_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows future prediction by physics simulation on the reconstructed fluid particles. The first 30 frames (1 second) are reconstruction, the last 30 frames (1 second) are future
+                                prediction.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/future_scalar_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <!-- End Future Prediction -->
+
+
+    <!-- Counterfactual Interaction Simulation -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2">Counterfactual Interaction Simulation</h2>
+
+                <div class="video-gallery-buttons is-wide" id="gallery-buttons-interact">
+                    <button class="button is-two-line is-primary" data-video-index="0">
+                        <p>Wind <br> Input View</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="1">
+                        <p>Wind <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="2">
+                        <p>Wind <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="3">
+                        <p>Wind <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="4">
+                        <p>Wind <br> Novel View D</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="5">
+                        <p>Object <br> Input View</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="6">
+                        <p>Object <br> Novel View A</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="7">
+                        <p>Object <br> Novel View B</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="8">
+                        <p>Object <br> Novel View C</p>
+                    </button>
+                    <button class="button is-two-line" data-video-index="9">
+                        <p>Object <br> Novel View D</p>
+                    </button>
+                </div>
+
+                <div class="video-gallery-carousel" id="gallery-carousel-interact">
+                    <div class="video-gallery-item active">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 50 frames (1.67 seconds) are the reconstruction, the last 56 frames (1.87 seconds) include the added wind effect.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_wind_view02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 50 frames (1.67 seconds) are the reconstruction, the last 56 frames (1.87 seconds) include the added wind effect.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_wind_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 50 frames (1.67 seconds) are the reconstruction, the last 56 frames (1.87 seconds) include the added wind effect.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_wind_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 50 frames (1.67 seconds) are the reconstruction, the last 56 frames (1.87 seconds) include the added wind effect.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_wind_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 50 frames (1.67 seconds) are the reconstruction, the last 56 frames (1.87 seconds) include the added wind effect.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_wind_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 11 frames (0.37 seconds) are the reconstruction, the last 79 frames (2.63 seconds) include the added object.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_object_view02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 11 frames (0.37 seconds) are the reconstruction, the last 79 frames (2.63 seconds) include the added object.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_object_view00.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 11 frames (0.37 seconds) are the reconstruction, the last 79 frames (2.63 seconds) include the added object.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_object_view01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 11 frames (0.37 seconds) are the reconstruction, the last 79 frames (2.63 seconds) include the added object.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_object_view03.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <figure class="image">
+                            <figcaption>
+                                Our physics-integrated fluid representation directly allows counterfactual interaction simulation by physics simulation on the reconstructed fluid particles. We enable this new task which was not possible with prior methods. The first 11 frames (0.37 seconds) are the reconstruction, the last 79 frames (2.63 seconds) include the added object.
+                        </figcaption>
+                        </figure>
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/interact_object_view04.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Counterfactual Interaction Simulation -->
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <!-- Clickable heading -->
+                <h2 class="title is-2" style="margin-bottom: 0.2rem;">
+                    Re-simulation on Novel Views
+                </h2>
+                <p class="toggle-handle" id="toggle-resim">
+                    (Click to show/hide)
+                </p>
+                <!-- Toggled content container (initially hidden) -->
+                <div class="toggle-container" id="resim-content" style="display: none;">
+                    <div class="video-gallery-buttons" id="gallery-buttons-resim">
+                        <button class="button is-two-line is-primary" data-video-index="0">
+                            <p>FluidNexus-Smoke <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="1">
+                            <p>FluidNexus-Smoke <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="2">
+                            <p>FluidNexus-Smoke <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="3">
+                            <p>FluidNexus-Smoke <br> Novel View D</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="4">
+                            <p>FluidNexus-Ball <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="5">
+                            <p>FluidNexus-Ball <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="6">
+                            <p>FluidNexus-Ball <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="7">
+                            <p>FluidNexus-Ball <br> Novel View D</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="8">
+                            <p>ScalarFlow <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="9">
+                            <p>ScalarFlow <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="10">
+                            <p>ScalarFlow <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="11">
+                            <p>ScalarFlow <br> Novel View D</p>
+                        </button>
+                    </div>
+
+                    <figure class="image">
+                        <figcaption>
+                            We use reconstructed velocity to advect the reconstructed appearance.
+                        </figcaption>
+                    </figure>
+
+                    <div class="video-gallery-carousel" id="gallery-carousel-resim">
+                        <div class="video-gallery-item active">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_blue_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_blue_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_blue_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_blue_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_red_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_red_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_red_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_red_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_scalar_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_scalar_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_scalar_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_scalar_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <!-- Clickable heading -->
+                <h2 class="title is-2" style="margin-bottom: 0.2rem;">
+                    Re-simulation on In-the-wild Scene
+                </h2>
+                <p class="toggle-handle" id="toggle-resim-wild">
+                    (Click to show/hide)
+                </p>
+                <!-- Toggled content container (initially hidden) -->
+                <div class="toggle-container" id="resim-wild-content" style="display: none;">
+                    <div class="video-gallery-buttons" id="gallery-buttons-resim-wild">
+                        <button class="button is-two-line is-primary" data-video-index="0">
+                            <p>In-the-wild <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="1">
+                            <p>In-the-wild <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="2">
+                            <p>In-the-wild <br> Novel View C</p>
+                        </button>
+                    </div>
+
+                    <figure class="image">
+                        <figcaption>
+                            We use reconstructed velocity to advect the reconstructed appearance.
+                        </figcaption>
+                    </figure>
+
+                    <div class="video-gallery-carousel" id="gallery-carousel-resim-wild">
+                        <div class="video-gallery-item active">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_wild_view1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_wild_view2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/resim_wild_view3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Ablation Novel View Synthesis -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <!-- Clickable heading with ID -->
+                <h2 class="title is-2" style="margin-bottom: 0.2rem;">
+                    Ablation Study on Novel-View Video Synthesizer
+                </h2>
+                <p class="toggle-handle" id="toggle-abl-nvs">
+                    (Click to show/hide)
+                </p>
+                <!-- Toggled content container, initially hidden -->
+                <div class="toggle-container" id="abl-nvs-content" style="display: none;">
+                    <div class="video-gallery-buttons" id="gallery-buttons-abl-nvs">
+                        <button class="button is-two-line is-primary" data-video-index="0">
+                            <p>FluidNexus-Smoke <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="1">
+                            <p>FluidNexus-Smoke <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="2">
+                            <p>FluidNexus-Smoke <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="3">
+                            <p>FluidNexus-Smoke <br> Novel View D</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="4">
+                            <p>FluidNexus-Ball <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="5">
+                            <p>FluidNexus-Ball <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="6">
+                            <p>FluidNexus-Ball <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="7">
+                            <p>FluidNexus-Ball <br> Novel View D</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="8">
+                            <p>ScalarFlow <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="9">
+                            <p>ScalarFlow <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="10">
+                            <p>ScalarFlow <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="11">
+                            <p>ScalarFlow <br> Novel View D</p>
+                        </button>
+                    </div>
+                    <figure class="image">
+                        <figcaption>
+                            NVS: novel-view video synthesizer, GVR: generative video refinement, LVG: long video generation
+                        </figcaption>
+                    </figure>
+                    <div class="video-gallery-carousel" id="gallery-carousel-abl-nvs">
+                        <div class="video-gallery-item active">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_blue_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_blue_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_blue_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_blue_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_red_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_red_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_red_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_red_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_scalar_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_scalar_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_scalar_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_nvs_scalar_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Ablation Novel View Synthesis -->
+
+
+    <!-- Ablation Re-simulation -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <!-- Clickable heading with ID -->
+                <h2 class="title is-2" style="margin-bottom: 0.2rem;">
+                    Ablation Study on Physics Losses
+                </h2>
+                <p class="toggle-handle" id="toggle-abl-resim">
+                    (Click to show/hide)
+                </p>
+                <!-- Toggled content container, initially hidden -->
+                <div class="toggle-container" id="abl-resim-content" style="display: none;">
+                    <div class="video-gallery-buttons" id="gallery-buttons-abl-resim">
+                        <button class="button is-two-line is-primary" data-video-index="0">
+                            <p>FluidNexus-Ball <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="1">
+                            <p>FluidNexus-Ball <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="2">
+                            <p>FluidNexus-Ball <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="3">
+                            <p>FluidNexus-Ball <br> Novel View D</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="4">
+                            <p>FluidNexus-Smoke <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="5">
+                            <p>FluidNexus-Smoke <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="6">
+                            <p>FluidNexus-Smoke <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="7">
+                            <p>FluidNexus-Smoke <br> Novel View D</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="8">
+                            <p>ScalarFlow <br> Novel View A</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="9">
+                            <p>ScalarFlow <br> Novel View B</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="10">
+                            <p>ScalarFlow <br> Novel View C</p>
+                        </button>
+                        <button class="button is-two-line" data-video-index="11">
+                            <p>ScalarFlow <br> Novel View D</p>
+                        </button>
+                    </div>
+                    <div class="video-gallery-carousel" id="gallery-carousel-abl-resim">
+                        <div class="video-gallery-item active">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_blue_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_blue_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_blue_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_blue_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_red_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_red_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_red_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_red_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_scalar_view00.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_scalar_view01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_scalar_view03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-gallery-item">
+                            <video muted controls loop playsinline webkit-playsinline>
+                                <source data-lazy="static/videos/abl_resim_scalar_view04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Ablation Re-simulation -->
+
+    <!-- Abstract -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2"  style="margin-bottom: 0.5rem;">Abstract</h2>
+                <figure class="image">
+                    <figcaption>
+                        We introduce <b>FluidNexus</b>, a framework for reconstructing and predicting 3D fluid dynamics
+                        from a single video by synthesizing novel-view videos for reference, integrating video
+                        generation with physics simulation. <b>FluidNexus</b> combines realistic video synthesis via
+                        diffusion-based refinement and a physics-integrated particle representation for fluid
+                        reconstruction and prediction. We validate our approach with two new real-world fluid datasets
+                        and enable dynamic novel view synthesis, future prediction, and interaction simulation. Code and
+                        datasets will be released.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--End abstract -->
+
+
+    <!-- Method -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2" style="margin-bottom: 1rem;">Method Overview</h2>
+                <figure class="image">
+                    <img src="static/images/method.png" alt="Method">
+                    <figcaption class="mt-3">
+                        <b>FluidNexus in reconstruction.</b> We represent 3D fluid dynamics by a novel physics-integrated representation, two-layer fluid particles. During reconstruction, from a single video, we synthesize multiple novel-view videos as references for 3D fluid reconstruction and then optimize the two-layer particle fluid representations over time. The optimization is supervised using the multi-view video frames to compute the visual loss and the physics constraints to compute the physics loss. Our reconstruction output is the 3D fluid appearance and velocity fields over all input frames.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--End method -->
+
+
+    <!-- Dataset -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2">The FluidNexus-Smoke and FluidNexus-Ball Datasets</h2>
+
+                <div class="video-gallery-buttons" id="gallery-buttons-dataset">
+                    <button class="button is-wide is-primary" data-video-index="0">
+                        <p>FluidNexus-Smoke</p>
+                    </button>
+                    <button class="button is-wide " data-video-index="1">
+                        <p>FluidNexus-Ball</p>
+                    </button>
+                </div>
+                <figure class="image">
+                <figcaption>
+                    Our FluidNexus-Smoke and FluidNexus-Ball datasets include 120 scenes for each. Each
+                        scene has 5 synchronized multi-view videos where the cameras are placed along a
+                        horizontal arc of approximately 120°.
+                </figcaption>
+                </figure>
+                <div class="video-gallery-carousel" id="gallery-carousel-dataset">
+                    <div class="video-gallery-item active">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/data_blue.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-gallery-item">
+                        <video muted controls loop playsinline webkit-playsinline>
+                            <source data-lazy="static/videos/data_red.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Dataset -->
+
+    <!--BibTex citation -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-2" style="margin-bottom: 1rem;">BibTex</h2>
+                <figure class="image" style="margin-bottom: 0; text-align: left;">
+                    <pre><code>@InProceedings{gao2025fluidnexus,
+    title     = {FluidNexus: 3D Fluid Reconstruction and Prediction from a Single Video},
+    author    = {Gao, Yue and Yu, Hong-Xing and Zhu, Bo and Wu, Jiajun},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2025},
+}</code></pre>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content has-text-centered">
+                        <p>
+                            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            <br>
+                            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
