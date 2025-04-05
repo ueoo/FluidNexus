@@ -67,11 +67,13 @@ body {
 
 /* .publication-authors {} */
 
-.publication-authors a {
+.publication-authors a,
+.footer .content a {
   color: #267cd3 !important;
 }
 
-.publication-authors a:hover {
+.publication-authors a:hover,
+.footer .content a:hover {
   text-decoration: underline;
 }
 

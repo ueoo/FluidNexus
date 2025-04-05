@@ -127,7 +127,7 @@
             <div class="container">
                 <h2 class="title is-2">Novel View Synthesis</h2>
                 <div class="video-gallery-buttons" id="gallery-buttons-nvs">
-                    <button class="button is-two-line is-primary" data-video-index="0">
+                    <button class="button is-two-line is-info" data-video-index="0">
                         <p>FluidNexus-Smoke <br> Novel View A</p>
                     </button>
                     <button class="button is-two-line" data-video-index="1">
@@ -244,7 +244,7 @@
                 <h2 class="title is-2">Future Prediction</h2>
 
                 <div class="video-gallery-buttons is-wide" id="gallery-buttons-fut">
-                    <button class="button is-two-line is-primary" data-video-index="0">
+                    <button class="button is-two-line is-info" data-video-index="0">
                         <p>FluidNexus-Ball <br> Input View</p>
                     </button>
                     <button class="button is-two-line" data-video-index="1">
@@ -471,7 +471,7 @@
                 <h2 class="title is-2">Counterfactual Interaction Simulation</h2>
 
                 <div class="video-gallery-buttons is-wide" id="gallery-buttons-interact">
-                    <button class="button is-two-line is-primary" data-video-index="0">
+                    <button class="button is-two-line is-info" data-video-index="0">
                         <p>Wind <br> Input View</p>
                     </button>
                     <button class="button is-two-line" data-video-index="1">
@@ -623,7 +623,7 @@
                 <!-- Toggled content container (initially hidden) -->
                 <div class="toggle-container" id="resim-content" style="display: none;">
                     <div class="video-gallery-buttons" id="gallery-buttons-resim">
-                        <button class="button is-two-line is-primary" data-video-index="0">
+                        <button class="button is-two-line is-info" data-video-index="0">
                             <p>FluidNexus-Smoke <br> Novel View A</p>
                         </button>
                         <button class="button is-two-line" data-video-index="1">
@@ -748,7 +748,7 @@
                 <!-- Toggled content container (initially hidden) -->
                 <div class="toggle-container" id="resim-wild-content" style="display: none;">
                     <div class="video-gallery-buttons" id="gallery-buttons-resim-wild">
-                        <button class="button is-two-line is-primary" data-video-index="0">
+                        <button class="button is-two-line is-info" data-video-index="0">
                             <p>In-the-wild <br> Novel View A</p>
                         </button>
                         <button class="button is-two-line" data-video-index="1">
@@ -802,7 +802,7 @@
                 <!-- Toggled content container, initially hidden -->
                 <div class="toggle-container" id="abl-nvs-content" style="display: none;">
                     <div class="video-gallery-buttons" id="gallery-buttons-abl-nvs">
-                        <button class="button is-two-line is-primary" data-video-index="0">
+                        <button class="button is-two-line is-info" data-video-index="0">
                             <p>FluidNexus-Smoke <br> Novel View A</p>
                         </button>
                         <button class="button is-two-line" data-video-index="1">
@@ -927,7 +927,7 @@
                 <!-- Toggled content container, initially hidden -->
                 <div class="toggle-container" id="abl-resim-content" style="display: none;">
                     <div class="video-gallery-buttons" id="gallery-buttons-abl-resim">
-                        <button class="button is-two-line is-primary" data-video-index="0">
+                        <button class="button is-two-line is-info" data-video-index="0">
                             <p>FluidNexus-Ball <br> Novel View A</p>
                         </button>
                         <button class="button is-two-line" data-video-index="1">
@@ -1078,7 +1078,7 @@
                 <h2 class="title is-2">The FluidNexus-Smoke and FluidNexus-Ball Datasets</h2>
 
                 <div class="video-gallery-buttons" id="gallery-buttons-dataset">
-                    <button class="button is-wide is-primary" data-video-index="0">
+                    <button class="button is-wide is-info" data-video-index="0">
                         <p>FluidNexus-Smoke</p>
                     </button>
                     <button class="button is-wide " data-video-index="1">
@@ -1114,20 +1114,25 @@
         <div class="hero-body">
             <div class="container">
                 <h2 class="title is-2" style="margin-bottom: 1rem;">BibTex</h2>
-                <figure class="image" style="margin-bottom: 0; text-align: left;">
-                    <pre><code>@InProceedings{gao2025fluidnexus,
+                <div style="position: relative;">
+                    <button id="bibtex-copy-button" class="button is-small is-info" style="position: absolute; top: 0.5rem; right: 0.5rem;">
+                        <span class="icon">
+                            <i class="fas fa-copy"></i>
+                        </span>
+                        <span>Copy</span>
+                    </button>
+                    <pre style="margin: 0; overflow-x: auto;"><code id="bibtex-code">@InProceedings{gao2025fluidnexus,
     title     = {FluidNexus: 3D Fluid Reconstruction and Prediction from a Single Video},
     author    = {Gao, Yue and Yu, Hong-Xing and Zhu, Bo and Wu, Jiajun},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     month     = {June},
     year      = {2025},
 }</code></pre>
-                </figure>
+                </div>
             </div>
         </div>
     </section>
     <!--End BibTex citation -->
-
 
     <footer class="footer">
         <div class="container">

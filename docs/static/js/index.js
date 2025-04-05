@@ -76,4 +76,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Function to copy BibTeX citation
+  function copyBibtex() {
+    const bibtexCode = document.getElementById('bibtex-code').textContent;
+    navigator.clipboard.writeText(bibtexCode).then(() => {
+      const button = document.getElementById('bibtex-copy-button');
+      const originalText = button.innerHTML;
+      button.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+      setTimeout(() => {
+        button.innerHTML = originalText;
+      }, 2000);
+    });
+  }
+
+  // Add event listener for copy button
+  const copyButton = document.getElementById('bibtex-copy-button');
+  if (copyButton) {
+    copyButton.addEventListener('click', copyBibtex);
+  }
 });

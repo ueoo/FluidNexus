@@ -34,8 +34,8 @@ const VideoGallery = (function () {
     });
 
     // Update buttons
-    buttons.forEach((button) => button.classList.remove("is-primary"));
-    buttons[index].classList.add("is-primary");
+    buttons.forEach((button) => button.classList.remove("is-info"));
+    buttons[index].classList.add("is-info");
 
     // Update descriptions (if any)
     descriptions.forEach((desc, i) => {

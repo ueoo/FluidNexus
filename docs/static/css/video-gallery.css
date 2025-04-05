@@ -1,6 +1,6 @@
 /* Base styles */
 :root {
-  --primary-color: #267cd3;
+  --primary-color: #348fea;
   --text-color: #4a4a4a;
   --content-width-lg: 1024px;
   --content-width-md: 1024px;
@@ -124,11 +124,11 @@ figcaption {
   object-fit: cover;
 }
 
-.video-gallery-buttons .button.is-primary {
+/* .video-gallery-buttons .button.is-info {
   background-color: var(--primary-color);
   border: 3px solid var(--primary-color);
   padding: 0;
-}
+} */
 
 .video-gallery-buttons .button.is-wide {
   width: 180px;
@@ -198,7 +198,7 @@ figure video {
 figure figcaption {
   margin-top: 0.1rem;
   margin-bottom: 0.69rem;
-  color: var(--text-color);
+  /* color: var(--text-color); */
   padding: 0 1rem;
   text-align: left;
   font-size: 1.3rem !important;
