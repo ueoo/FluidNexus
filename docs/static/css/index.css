@@ -50,6 +50,7 @@ body {
 
 .publication-authors {
   font-family: "Google Sans", sans-serif;
+  line-height: 2.2;
 }
 
 .publication-venue {
@@ -67,7 +68,7 @@ body {
 /* .publication-authors {} */
 
 .publication-authors a {
-  color: #07b5e0 !important;
+  color: #267cd3 !important;
 }
 
 .publication-authors a:hover {
@@ -139,7 +140,7 @@ body {
   /* No underline by default */
   margin-bottom: 0.2rem;
   font-size: medium;
-  color: #0055AA;
+  color: #267cd3;
 }
 
 .toggle-handle:hover {
@@ -152,4 +153,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.normal-weight {
+  font-weight: normal !important;
+}
+
+.bold-text {
+  font-weight: bold !important;
 }

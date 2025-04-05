@@ -1147,14 +1147,14 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
 }
 
 .button.is-primary {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     border-color: transparent;
     color: #fff
 }
 
 .button.is-primary.is-hovered,
 .button.is-primary:hover {
-    background-color: #00c4a7;
+    background-color: #267cd3;
     border-color: transparent;
     color: #fff
 }
@@ -1179,14 +1179,14 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
 
 .button.is-primary[disabled],
 fieldset[disabled] .button.is-primary {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     border-color: transparent;
     box-shadow: none
 }
 
 .button.is-primary.is-inverted {
     background-color: #fff;
-    color: #00d1b2
+    color: #267cd3
 }
 
 .button.is-primary.is-inverted.is-hovered,
@@ -1199,7 +1199,7 @@ fieldset[disabled] .button.is-primary.is-inverted {
     background-color: #fff;
     border-color: transparent;
     box-shadow: none;
-    color: #00d1b2
+    color: #267cd3
 }
 
 .button.is-primary.is-loading::after {
@@ -1208,21 +1208,21 @@ fieldset[disabled] .button.is-primary.is-inverted {
 
 .button.is-primary.is-outlined {
     background-color: transparent;
-    border-color: #00d1b2;
-    color: #00d1b2
+    border-color: #267cd3;
+    color: #267cd3
 }
 
 .button.is-primary.is-outlined.is-focused,
 .button.is-primary.is-outlined.is-hovered,
 .button.is-primary.is-outlined:focus,
 .button.is-primary.is-outlined:hover {
-    background-color: #00d1b2;
-    border-color: #00d1b2;
+    background-color: #267cd3;
+    border-color: #267cd3;
     color: #fff
 }
 
 .button.is-primary.is-outlined.is-loading::after {
-    border-color: transparent transparent #00d1b2 #00d1b2 !important
+    border-color: transparent transparent #267cd3 #267cd3 !important
 }
 
 .button.is-primary.is-outlined.is-loading.is-focused::after,
@@ -1235,9 +1235,9 @@ fieldset[disabled] .button.is-primary.is-inverted {
 .button.is-primary.is-outlined[disabled],
 fieldset[disabled] .button.is-primary.is-outlined {
     background-color: transparent;
-    border-color: #00d1b2;
+    border-color: #267cd3;
     box-shadow: none;
-    color: #00d1b2
+    color: #267cd3
 }
 
 .button.is-primary.is-inverted.is-outlined {
@@ -1251,14 +1251,14 @@ fieldset[disabled] .button.is-primary.is-outlined {
 .button.is-primary.is-inverted.is-outlined:focus,
 .button.is-primary.is-inverted.is-outlined:hover {
     background-color: #fff;
-    color: #00d1b2
+    color: #267cd3
 }
 
 .button.is-primary.is-inverted.is-outlined.is-loading.is-focused::after,
 .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after,
 .button.is-primary.is-inverted.is-outlined.is-loading:focus::after,
 .button.is-primary.is-inverted.is-outlined.is-loading:hover::after {
-    border-color: transparent transparent #00d1b2 #00d1b2 !important
+    border-color: transparent transparent #267cd3 #267cd3 !important
 }
 
 .button.is-primary.is-inverted.is-outlined[disabled],
@@ -1271,21 +1271,21 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
 
 .button.is-primary.is-light {
     background-color: #ebfffc;
-    color: #00947e
+    color: #267cd3
 }
 
 .button.is-primary.is-light.is-hovered,
 .button.is-primary.is-light:hover {
     background-color: #defffa;
     border-color: transparent;
-    color: #00947e
+    color: #267cd3
 }
 
 .button.is-primary.is-light.is-active,
 .button.is-primary.is-light:active {
     background-color: #d1fff8;
     border-color: transparent;
-    color: #00947e
+    color: #267cd3
 }
 
 .button.is-link {
@@ -1573,7 +1573,7 @@ fieldset[disabled] .button.is-info.is-inverted.is-outlined {
 }
 
 .button.is-success {
-    background-color: #48c774;
+    background-color: #267cd3;
     border-color: transparent;
     color: #fff
 }
@@ -1605,14 +1605,14 @@ fieldset[disabled] .button.is-info.is-inverted.is-outlined {
 
 .button.is-success[disabled],
 fieldset[disabled] .button.is-success {
-    background-color: #48c774;
+    background-color: #267cd3;
     border-color: transparent;
     box-shadow: none
 }
 
 .button.is-success.is-inverted {
     background-color: #fff;
-    color: #48c774
+    color: #267cd3
 }
 
 .button.is-success.is-inverted.is-hovered,
@@ -1625,7 +1625,7 @@ fieldset[disabled] .button.is-success.is-inverted {
     background-color: #fff;
     border-color: transparent;
     box-shadow: none;
-    color: #48c774
+    color: #267cd3
 }
 
 .button.is-success.is-loading::after {
@@ -1634,21 +1634,21 @@ fieldset[disabled] .button.is-success.is-inverted {
 
 .button.is-success.is-outlined {
     background-color: transparent;
-    border-color: #48c774;
-    color: #48c774
+    border-color: #267cd3;
+    color: #267cd3
 }
 
 .button.is-success.is-outlined.is-focused,
 .button.is-success.is-outlined.is-hovered,
 .button.is-success.is-outlined:focus,
 .button.is-success.is-outlined:hover {
-    background-color: #48c774;
-    border-color: #48c774;
+    background-color: #267cd3;
+    border-color: #267cd3;
     color: #fff
 }
 
 .button.is-success.is-outlined.is-loading::after {
-    border-color: transparent transparent #48c774 #48c774 !important
+    border-color: transparent transparent #267cd3 #267cd3 !important
 }
 
 .button.is-success.is-outlined.is-loading.is-focused::after,
@@ -1661,9 +1661,9 @@ fieldset[disabled] .button.is-success.is-inverted {
 .button.is-success.is-outlined[disabled],
 fieldset[disabled] .button.is-success.is-outlined {
     background-color: transparent;
-    border-color: #48c774;
+    border-color: #267cd3;
     box-shadow: none;
-    color: #48c774
+    color: #267cd3
 }
 
 .button.is-success.is-inverted.is-outlined {
@@ -1677,14 +1677,14 @@ fieldset[disabled] .button.is-success.is-outlined {
 .button.is-success.is-inverted.is-outlined:focus,
 .button.is-success.is-inverted.is-outlined:hover {
     background-color: #fff;
-    color: #48c774
+    color: #267cd3
 }
 
 .button.is-success.is-inverted.is-outlined.is-loading.is-focused::after,
 .button.is-success.is-inverted.is-outlined.is-loading.is-hovered::after,
 .button.is-success.is-inverted.is-outlined.is-loading:focus::after,
 .button.is-success.is-inverted.is-outlined.is-loading:hover::after {
-    border-color: transparent transparent #48c774 #48c774 !important
+    border-color: transparent transparent #267cd3 #267cd3 !important
 }
 
 .button.is-success.is-inverted.is-outlined[disabled],
@@ -2631,13 +2631,13 @@ fieldset[disabled] .button {
 }
 
 .notification.is-primary {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
 .notification.is-primary.is-light {
     background-color: #ebfffc;
-    color: #00947e
+    color: #267cd3
 }
 
 .notification.is-link {
@@ -2661,7 +2661,7 @@ fieldset[disabled] .button {
 }
 
 .notification.is-success {
-    background-color: #48c774;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -2784,19 +2784,19 @@ fieldset[disabled] .button {
 }
 
 .progress.is-primary::-webkit-progress-value {
-    background-color: #00d1b2
+    background-color: #267cd3
 }
 
 .progress.is-primary::-moz-progress-bar {
-    background-color: #00d1b2
+    background-color: #267cd3
 }
 
 .progress.is-primary::-ms-fill {
-    background-color: #00d1b2
+    background-color: #267cd3
 }
 
 .progress.is-primary:indeterminate {
-    background-image: linear-gradient(to right, #00d1b2 30%, #ededed 30%)
+    background-image: linear-gradient(to right, #267cd3 30%, #ededed 30%)
 }
 
 .progress.is-link::-webkit-progress-value {
@@ -2832,19 +2832,19 @@ fieldset[disabled] .button {
 }
 
 .progress.is-success::-webkit-progress-value {
-    background-color: #48c774
+    background-color: #267cd3
 }
 
 .progress.is-success::-moz-progress-bar {
-    background-color: #48c774
+    background-color: #267cd3
 }
 
 .progress.is-success::-ms-fill {
-    background-color: #48c774
+    background-color: #267cd3
 }
 
 .progress.is-success:indeterminate {
-    background-image: linear-gradient(to right, #48c774 30%, #ededed 30%)
+    background-image: linear-gradient(to right, #267cd3 30%, #ededed 30%)
 }
 
 .progress.is-warning::-webkit-progress-value {
@@ -2982,8 +2982,8 @@ fieldset[disabled] .button {
 
 .table td.is-primary,
 .table th.is-primary {
-    background-color: #00d1b2;
-    border-color: #00d1b2;
+    background-color: #267cd3;
+    border-color: #267cd3;
     color: #fff
 }
 
@@ -3003,8 +3003,8 @@ fieldset[disabled] .button {
 
 .table td.is-success,
 .table th.is-success {
-    background-color: #48c774;
-    border-color: #48c774;
+    background-color: #267cd3;
+    border-color: #267cd3;
     color: #fff
 }
 
@@ -3030,7 +3030,7 @@ fieldset[disabled] .button {
 
 .table td.is-selected,
 .table th.is-selected {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -3055,7 +3055,7 @@ fieldset[disabled] .button {
 }
 
 .table tr.is-selected {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -3249,13 +3249,13 @@ fieldset[disabled] .button {
 }
 
 .tag:not(body).is-primary {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
 .tag:not(body).is-primary.is-light {
     background-color: #ebfffc;
-    color: #00947e
+    color: #267cd3
 }
 
 .tag:not(body).is-link {
@@ -3279,7 +3279,7 @@ fieldset[disabled] .button {
 }
 
 .tag:not(body).is-success {
-    background-color: #48c774;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -3724,7 +3724,7 @@ fieldset[disabled] .textarea:-ms-input-placeholder {
 
 .is-primary.input,
 .is-primary.textarea {
-    border-color: #00d1b2
+    border-color: #267cd3
 }
 
 .is-primary.input:active,
@@ -3772,7 +3772,7 @@ fieldset[disabled] .textarea:-ms-input-placeholder {
 
 .is-success.input,
 .is-success.textarea {
-    border-color: #48c774
+    border-color: #267cd3
 }
 
 .is-success.input:active,
@@ -4050,11 +4050,11 @@ fieldset[disabled] .select select:hover {
 }
 
 .select.is-primary:not(:hover)::after {
-    border-color: #00d1b2
+    border-color: #267cd3
 }
 
 .select.is-primary select {
-    border-color: #00d1b2
+    border-color: #267cd3
 }
 
 .select.is-primary select.is-hovered,
@@ -4110,11 +4110,11 @@ fieldset[disabled] .select select:hover {
 }
 
 .select.is-success:not(:hover)::after {
-    border-color: #48c774
+    border-color: #267cd3
 }
 
 .select.is-success select {
-    border-color: #48c774
+    border-color: #267cd3
 }
 
 .select.is-success select.is-hovered,
@@ -4330,14 +4330,14 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-primary .file-cta {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     border-color: transparent;
     color: #fff
 }
 
 .file.is-primary.is-hovered .file-cta,
 .file.is-primary:hover .file-cta {
-    background-color: #00c4a7;
+    background-color: #267cd3;
     border-color: transparent;
     color: #fff
 }
@@ -4411,7 +4411,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .file.is-success .file-cta {
-    background-color: #48c774;
+    background-color: #267cd3;
     border-color: transparent;
     color: #fff
 }
@@ -4722,7 +4722,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .help.is-primary {
-    color: #00d1b2
+    color: #267cd3
 }
 
 .help.is-link {
@@ -4734,7 +4734,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .help.is-success {
-    color: #48c774
+    color: #267cd3
 }
 
 .help.is-warning {
@@ -5610,13 +5610,13 @@ print {
 }
 
 .message.is-primary .message-header {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
 .message.is-primary .message-body {
-    border-color: #00d1b2;
-    color: #00947e
+    border-color: #267cd3;
+    color: #267cd3
 }
 
 .message.is-link {
@@ -5652,12 +5652,12 @@ print {
 }
 
 .message.is-success .message-header {
-    background-color: #48c774;
+    background-color: #267cd3;
     color: #fff
 }
 
 .message.is-success .message-body {
-    border-color: #48c774;
+    border-color: #267cd3;
     color: #257942
 }
 
@@ -6122,7 +6122,7 @@ print {
 }
 
 .navbar.is-primary {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -6187,7 +6187,7 @@ print {
     }
 
     .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
-        background-color: #00d1b2;
+        background-color: #267cd3;
         color: #fff
     }
 }
@@ -6335,7 +6335,7 @@ print {
 }
 
 .navbar.is-success {
-    background-color: #48c774;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -6400,7 +6400,7 @@ print {
     }
 
     .navbar.is-success .navbar-dropdown a.navbar-item.is-active {
-        background-color: #48c774;
+        background-color: #267cd3;
         color: #fff
     }
 }
@@ -7312,16 +7312,16 @@ print {
 }
 
 .panel.is-primary .panel-heading {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
 .panel.is-primary .panel-tabs a.is-active {
-    border-bottom-color: #00d1b2
+    border-bottom-color: #267cd3
 }
 
 .panel.is-primary .panel-block.is-active .panel-icon {
-    color: #00d1b2
+    color: #267cd3
 }
 
 .panel.is-link .panel-heading {
@@ -7351,16 +7351,16 @@ print {
 }
 
 .panel.is-success .panel-heading {
-    background-color: #48c774;
+    background-color: #267cd3;
     color: #fff
 }
 
 .panel.is-success .panel-tabs a.is-active {
-    border-bottom-color: #48c774
+    border-bottom-color: #267cd3
 }
 
 .panel.is-success .panel-block.is-active .panel-icon {
-    color: #48c774
+    color: #267cd3
 }
 
 .panel.is-warning .panel-heading {
@@ -9940,7 +9940,7 @@ a.has-text-dark:hover {
 }
 
 .has-text-primary {
-    color: #00d1b2 !important
+    color: #267cd3 !important
 }
 
 a.has-text-primary:focus,
@@ -9949,7 +9949,7 @@ a.has-text-primary:hover {
 }
 
 .has-background-primary {
-    background-color: #00d1b2 !important
+    background-color: #267cd3 !important
 }
 
 .has-text-primary-light {
@@ -9966,7 +9966,7 @@ a.has-text-primary-light:hover {
 }
 
 .has-text-primary-dark {
-    color: #00947e !important
+    color: #267cd3 !important
 }
 
 a.has-text-primary-dark:focus,
@@ -9975,7 +9975,7 @@ a.has-text-primary-dark:hover {
 }
 
 .has-background-primary-dark {
-    background-color: #00947e !important
+    background-color: #267cd3 !important
 }
 
 .has-text-link {
@@ -10057,7 +10057,7 @@ a.has-text-info-dark:hover {
 }
 
 .has-text-success {
-    color: #48c774 !important
+    color: #267cd3 !important
 }
 
 a.has-text-success:focus,
@@ -10066,7 +10066,7 @@ a.has-text-success:hover {
 }
 
 .has-background-success {
-    background-color: #48c774 !important
+    background-color: #267cd3 !important
 }
 
 .has-text-success-light {
@@ -12200,7 +12200,7 @@ print {
 }
 
 .hero.is-primary {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -12224,7 +12224,7 @@ print {
 
 @media screen and (max-width:1023px) {
     .hero.is-primary .navbar-menu {
-        background-color: #00d1b2
+        background-color: #267cd3
     }
 }
 
@@ -12270,16 +12270,16 @@ print {
 .hero.is-primary .tabs.is-toggle li.is-active a:hover {
     background-color: #fff;
     border-color: #fff;
-    color: #00d1b2
+    color: #267cd3
 }
 
 .hero.is-primary.is-bold {
-    background-image: linear-gradient(141deg, #009e6c 0, #00d1b2 71%, #00e7eb 100%)
+    background-image: linear-gradient(141deg, #009e6c 0, #267cd3 71%, #00e7eb 100%)
 }
 
 @media screen and (max-width:768px) {
     .hero.is-primary.is-bold .navbar-menu {
-        background-image: linear-gradient(141deg, #009e6c 0, #00d1b2 71%, #00e7eb 100%)
+        background-image: linear-gradient(141deg, #009e6c 0, #267cd3 71%, #00e7eb 100%)
     }
 }
 
@@ -12452,7 +12452,7 @@ print {
 }
 
 .hero.is-success {
-    background-color: #48c774;
+    background-color: #267cd3;
     color: #fff
 }
 
@@ -12476,7 +12476,7 @@ print {
 
 @media screen and (max-width:1023px) {
     .hero.is-success .navbar-menu {
-        background-color: #48c774
+        background-color: #267cd3
     }
 }
 
@@ -12522,16 +12522,16 @@ print {
 .hero.is-success .tabs.is-toggle li.is-active a:hover {
     background-color: #fff;
     border-color: #fff;
-    color: #48c774
+    color: #267cd3
 }
 
 .hero.is-success.is-bold {
-    background-image: linear-gradient(141deg, #29b342 0, #48c774 71%, #56d296 100%)
+    background-image: linear-gradient(141deg, #29b342 0, #267cd3 71%, #56d296 100%)
 }
 
 @media screen and (max-width:768px) {
     .hero.is-success.is-bold .navbar-menu {
-        background-image: linear-gradient(141deg, #29b342 0, #48c774 71%, #56d296 100%)
+        background-image: linear-gradient(141deg, #29b342 0, #267cd3 71%, #56d296 100%)
     }
 }
 

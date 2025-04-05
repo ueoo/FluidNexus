@@ -558,28 +558,28 @@ input[type=range].slider.is-dark.has-output+output {
 }
 
 input[type=range].slider.is-primary::-moz-range-track {
-    background: #00d1b2 !important
+    background: #267cd3 !important
 }
 
 input[type=range].slider.is-primary::-webkit-slider-runnable-track {
-    background: #00d1b2 !important
+    background: #267cd3 !important
 }
 
 input[type=range].slider.is-primary::-ms-track {
-    background: #00d1b2 !important
+    background: #267cd3 !important
 }
 
 input[type=range].slider.is-primary::-ms-fill-lower {
-    background: #00d1b2
+    background: #267cd3
 }
 
 input[type=range].slider.is-primary::-ms-fill-upper {
-    background: #00d1b2
+    background: #267cd3
 }
 
 input[type=range].slider.is-primary .has-output-tooltip+output,
 input[type=range].slider.is-primary.has-output+output {
-    background-color: #00d1b2;
+    background-color: #267cd3;
     color: #fff
 }
 
