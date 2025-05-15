@@ -30,11 +30,15 @@ git clone https://github.com/ueoo/FluidNexus.git
 cd FluidNexus
 conda env create -f fluid_nexus.yml
 
+conda activate fluid_nexus
+
 # Install the 3D Gaussian Splatting submodules
 pip install git+https://github.com/graphdeco-inria/diff-gaussian-rasterization.git
 pip install submodules/gaussian_rasterization_ch3
 pip install submodules/gaussian_rasterization_ch1
 pip install submodules/simple-knn
+pip install git+https://github.com/openai/CLIP.git
+pip install xformers --index-url https://download.pytorch.org/whl/cu124
 ```
 
 ### Download the Datasets
@@ -71,7 +75,6 @@ mv FluidNexusSmokeAll /path/to/FluidNexusRoot
 mv FluidNexusSmokeAllRaw /path/to/FluidNexusRoot
 mv ScalarReal /path/to/FluidNexusRoot
 ```
-
 
 ### Frame-wise Novel View Synthesis
 
