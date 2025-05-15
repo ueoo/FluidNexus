@@ -1,0 +1,189 @@
+{
+  "resolution": 1,
+  "model": "gm_dynamics",
+  "scaling_lr": 0.0,
+  "feature_lr": 0.0,
+  "omega_lr": 0.0,
+  "rotation_lr": 0.0,
+  "xyz_lr": 0.0,
+  "preprocess_points": 0,
+
+  "img_offset": false,
+  "capture_part": "smoke",
+  "init_region_type": "small",
+  "start_time": 55,
+  "duration": 50,
+  "time_step": 2,
+
+  "max_timestamp": 1.0,
+
+  "rd_pipe": "render_dynamics",
+  "rgb_function": "none",
+
+  "no_init_pcd": true,
+
+  "init_trbf_c_fix": true,
+  "init_color_fix_value": 0.6,
+  "init_num_pts_per_time": 1000,
+  "source_init": true,
+
+  "batch": 1,
+
+  "no_densify_prune": true,
+
+  "stable_iterations": 20,
+  "simulation_ratio": 1,
+  "secs": 0.033,
+  "solver_iterations": 10,
+  "solver_iterations_future": 5,
+  "alpha": -6,
+  "p0": 1.5,
+  "p0_future": 1.5,
+  "k": 3,
+
+  "init_visual_num_pts": 500,
+  "init_thick_visual_num_pts": 400,
+  "init_visual_radius_small_max": 0.014,
+  "init_visual_radius_max": 0.028,
+  "init_x_mid": 0.326,
+  "init_visual_y_min": -0.02,
+  "init_visual_y_max": 0.32,
+  "init_visual_y_thick_min": 0.16,
+  "init_z_mid": -0.3,
+
+  "init_hidden_radius_max": 0.055,
+  "init_hidden_delta": 0.009,
+  "init_hidden_y_min": -0.04,
+  "init_hidden_y_max": 0.35,
+
+  "emitter_hidden_delta": 0.009,
+  "emitter_visual_delta": 0.003,
+  "emitter_center_y_hidden": -0.04,
+  "emitter_center_y_visual": -0.02,
+  "emitter_center_y_hidden_max": 0.25,
+  "emitter_center_y_visual_max": 0.16,
+
+  "emitter_visual_radius_ratio": 1.8,
+  "emitter_hidden_radius_ratio": 4,
+
+  "decay_frames_future_p0": 30,
+
+  "sparse_views_from_time_index": -1,
+
+  "future_pred_frames": 60,
+
+  "buoyancy_max_y": 1.0,
+
+  "min_neighbors": 1,
+
+  "new_hidden_particles_per_sec": 40,
+  "new_visual_particles_per_sec": 40,
+
+  "emit_ratio_hidden": 3.0,
+  "emit_ratio_visual": 1.0,
+
+  "emitter_points_off_y0": false,
+
+  "lambda_first_distance": 1.0,
+  "distance_threshold_visual": 0.004,
+  "distance_threshold_hidden": 0.004,
+
+  "lambda_current_distance": 0.1,
+  "lambda_exyz": 0.1,
+  "lambda_vel": 0.0,
+  "lambda_gas_constraints": 1.0,
+  "lambda_next_gas_constraints": 0.1,
+  "lambda_image": 1.0,
+
+  "iterations_per_time_first": 1000,
+
+  "iterations_per_time_current": 1000,
+  "iterations_per_time_current_max": 1000,
+
+  "iterations_per_time_current_sparse": 1000,
+
+  "iterations_per_time_current_level_two": 250,
+  "iterations_per_time_current_level_two_max": 500,
+
+
+  "fit_xyz": false,
+  "fit_color": true,
+  "fit_scales": true,
+  "fit_opacity": true,
+  "fit_rotation": true,
+
+  "level_two_color_3ch": true,
+
+  "lambda_consistency_xyz": 0.0,
+  "lambda_min_update_xyz": 0.0,
+
+  "lambda_consistency_color": 10.0,
+  "lambda_consistency_scales": 0.0,
+  "lambda_consistency_opacity": 8.0,
+  "lambda_consistency_rotation": 0.1,
+
+  "consistency_color_threshold": 0.0,
+  "consistency_scales_threshold": 0.0,
+  "consistency_opacity_threshold": 0.0,
+  "consistency_rotation_threshold": 0.0,
+
+  "high_frequency_per_visual": 3,
+
+  "inherit_prev_color": true,
+  "inherit_prev_scales": true,
+  "inherit_prev_opacity": true,
+  "inherit_prev_rotation": true,
+
+  "lambda_reg_scaling": 1.0,
+  "scaling_reg_ratio_threshold": 4.0,
+
+  "smoothed_window_size": 5,
+  "use_smoothed_color": true,
+  "use_smoothed_scales": true,
+  "use_smoothed_opacity": true,
+  "use_smoothed_rotation": true,
+
+  "use_level_two_in_future": false,
+  "use_level_two_smoothed_in_future": false,
+
+  "test_iteration": 30000,
+
+  "save_iterations": [3000, 7000, 15000, 30000],
+  "test_iterations": [3000, 7000, 15000, 30000],
+
+  "bg_load_iteration": 15000,
+
+  "train_views": "20134",
+  "train_views_fake": "0134",
+  "test_views_fake": "",
+
+
+  "use_refined_fake": true,
+  "refined_strength": "0d5",
+
+  "gen_future_since": -1,
+  "gen_prefixed_future": "i2v3",
+  "gen_future_strength": "0d75",
+
+  "gray_image": false,
+
+  "test_all_views": false,
+
+  "spherical_cam_start": 0,
+  "spherical_cam_duration": 120,
+  "spherical_cam_step": 1,
+
+  "wind_since": 50,
+  "wind_force": [35.0, 0.0, 0.0],
+  "wind_power": 1,
+
+  "rigid_since": -1,
+  "rigid_body": "cylinder",
+  "rigid_body_center": [0.34, 0.45, -0.225],
+  "rigid_cuboid_num_one_side": 15,
+  "rigid_cuboid_num": [10, 10, 80],
+  "rigid_sphere_radius": 5,
+  "rigid_sphere_num": 1000,
+  "rigid_cylinder_radius": 4,
+  "rigid_cylinder_num": [50, 80]
+}

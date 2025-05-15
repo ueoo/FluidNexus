@@ -1,0 +1,35 @@
+args:
+  latent_channels: 16
+  mode: inference
+  # load: "{your CogVideoX SAT folder}/transformer" # This is for Full model without lora adapter
+  # load: "{your lora folder} such as zRzRzRzRzRzRzR/lora-disney-08-20-13-28" # This is for Full model without lora adapter
+  # load: "/path/to/cogvideox-sat/2b/transformer"
+  load: /path/to/FluidNexusRoot/cogvideox_lora_ckpts/lora_cogvidx5b_fluid_nexus_ball_i2v_fix3samples-10-28-17-06/
+
+  batch_size: 1
+
+  sdedit_strength: 0.75  # 'all'  # 0.0 to 1.0, 1.0 means full sampling
+  sdedit_strength_fake: 0.5
+  sdedit_prompt_idx: 0
+  sdedit_labels_dir: /path/to/FluidNexusRoot/FluidNexusBallAll_cogvideox_dataset/labels
+  sdedit_sequence_name: seq_10_24_19_29_19
+  sdedit_frames_dir: /path/to/FluidNexusRoot/FluidNexusBall
+  sdedit_frames_dir_fake: /path/to/FluidNexusRoot/fluid_nexus_dynamics_logs/fluid_nexus_ball_physical_future_simulation/training_render_for_cogvideox
+  sdedit_prefix_start_idx: 237
+  sdedit_prefix_start_idx_fake: 111
+  sdedit_prefix_num_frames: 9
+  sdedit_start_idx: 120
+  sdedit_label_start_idx: 237
+  sdedit_num_frames: 73
+  sdedit_frame_step: 2
+  sdedit_zero123_finetune_step: 88000
+  sdedit_view_idx: 2
+  sdedit_tgt_view_idx: 4
+  sdedit_ignore_input_fps: True
+
+  sampling_num_frames: 19  # Must be 13, 11 or 9
+  sampling_fps: 8
+  # fp16: True # For CogVideoX-2B
+  bf16: True # For CogVideoX-5B
+  output_dir: /path/to/FluidNexusRoot/cogvideox_lora_outputs/5b_lora_all_sdedit_pi2v_future_ball/
+  force_inference: True

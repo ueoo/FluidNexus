@@ -1,0 +1,177 @@
+{
+  "resolution": 1,
+  "model": "gm_background",
+  "scaling_lr": 0.005,
+  "feature_lr": 0.0025,
+  "color_lr": 0.0025,
+  "omega_lr": 0.0,
+  "rotation_lr": 0.001,
+  "xyz_lr": 0.0,
+
+  "position_lr_init": 0.00016,
+  "position_lr_final": 0.0000016,
+  "position_lr_delay_mult": 0.01,
+  "position_lr_max_steps": 30000,
+
+  "preprocess_points": 0,
+
+  "img_offset": false,
+  "is_bg": false,
+  "init_region_type": "none",
+  "start_time": 0,
+  "duration": 1,
+  "time_step": 1,
+
+  "max_timestamp": 1.0,
+
+  "rd_pipe": "render_background",
+  "rgb_function": "none",
+
+  "no_init_pcd": false,
+  "capture_part": "ball",
+  "init_pcd_bg": true,
+  "init_pcd_object": true,
+
+  "init_trbf_c_fix": false,
+  "init_color_fix_value": 0.6,
+  "init_num_pts_per_time": 1000,
+  "source_init": false,
+
+  "batch": 1,
+
+  "no_densify_prune": false,
+
+  "prune_near_interval": 1000,
+  "prune_near_with_object": true,
+  "prune_near_cam_interval": -1,
+  "prune_large_interval": 1000,
+
+  "stable_iterations": 20,
+  "simulation_ratio": 1,
+  "secs": 0.033,
+  "solver_iterations": 10,
+  "solver_iterations_future": 5,
+  "alpha": -6,
+  "p0": 1.5,
+  "p0_future": 1.5,
+  "k": 3,
+
+  "decay_frames_future_p0": 30,
+
+  "sparse_views_from_time_index": -1,
+
+  "future_pred_frames": 0,
+
+  "buoyancy_max_y": 0.8,
+
+  "min_neighbors": 1,
+
+  "new_hidden_particles_per_sec": 40,
+  "new_visual_particles_per_sec": 40,
+
+  "emit_ratio_hidden": 4.0,
+  "emit_ratio_visual": 8.0,
+
+  "emitter_points_off_y0": false,
+
+  "lambda_first_distance": 1.0,
+  "distance_threshold_visual": 0.004,
+  "distance_threshold_hidden": 0.004,
+
+  "lambda_current_distance": 0.1,
+  "lambda_exyz": 0.1,
+  "lambda_vel": 0.0,
+  "lambda_gas_constraints": 1.0,
+  "lambda_next_gas_constraints": 0.1,
+  "lambda_image": 1.0,
+
+  "iterations_per_time_first": 1000,
+
+  "iterations_per_time_current": 1000,
+  "iterations_per_time_current_max": 1000,
+
+  "iterations_per_time_current_sparse": 250,
+
+  "iterations_per_time_current_level_two": 250,
+  "iterations_per_time_current_level_two_max": 250,
+
+
+  "fit_xyz": false,
+  "fit_color": true,
+  "fit_scales": true,
+  "fit_opacity": true,
+  "fit_rotation": true,
+
+  "lambda_consistency_xyz": 0.0,
+  "lambda_min_update_xyz": 0.0,
+
+  "lambda_consistency_color": 10.0,
+  "lambda_consistency_scales": 0.0,
+  "lambda_consistency_opacity": 8.0,
+  "lambda_consistency_rotation": 0.1,
+
+  "consistency_color_threshold": 0.0,
+  "consistency_scales_threshold": 0.0,
+  "consistency_opacity_threshold": 0.0,
+  "consistency_rotation_threshold": 0.0,
+
+  "high_frequency_per_visual": 3,
+
+  "inherit_prev_color": true,
+  "inherit_prev_scales": true,
+  "inherit_prev_opacity": true,
+  "inherit_prev_rotation": true,
+
+  "lambda_reg_scaling": 0.0,
+  "scaling_reg_ratio_threshold": 2.0,
+
+  "smoothed_window_size": 5,
+  "use_smoothed_color": true,
+  "use_smoothed_scales": true,
+  "use_smoothed_opacity": true,
+  "use_smoothed_rotation": true,
+
+  "use_level_two_in_future": false,
+  "use_level_two_smoothed_in_future": false,
+
+  "iterations": 15000,
+
+  "test_iteration": 15000,
+
+  "save_iterations": [3000, 7000, 15000, 30000, 60000],
+  "test_iterations": [3000, 7000, 15000, 30000, 60000],
+
+  "train_views": "01234",
+  "train_views_fake": "",
+  "test_views_fake": "",
+
+
+  "use_refined_fake": true,
+  "refined_strength": "0d26",
+
+  "gen_future_since": -1,
+  "gen_prefixed_future": "i2v3_rigidcylinderr4numr50h80",
+  "gen_future_strength": "0d45",
+
+  "gray_image": false,
+
+  "test_all_views": false,
+
+  "spherical_cam_start": 0,
+  "spherical_cam_duration": 120,
+  "spherical_cam_step": 1,
+
+  "wind_since": -1,
+  "wind_force": [0.0, 0.0, 0.0],
+  "wind_power": 1,
+
+  "rigid_since": -1,
+  "rigid_body": "cylinder",
+  "rigid_body_center": [0.34, 0.45, -0.225],
+  "rigid_cuboid_num_one_side": 15,
+  "rigid_cuboid_num": [10, 10, 80],
+  "rigid_sphere_radius": 5,
+  "rigid_sphere_num": 1000,
+  "rigid_cylinder_radius": 4,
+  "rigid_cylinder_num": [50, 80]
+}
