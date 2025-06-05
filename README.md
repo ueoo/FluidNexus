@@ -34,6 +34,7 @@ conda activate fluid_nexus
 
 # Install the 3D Gaussian Splatting submodules
 pip install git+https://github.com/graphdeco-inria/diff-gaussian-rasterization.git
+cd /path/to/FluidNexusRoot/FluidNexus/FluidDynamics
 pip install submodules/gaussian_rasterization_ch3
 pip install submodules/gaussian_rasterization_ch1
 pip install submodules/simple-knn
