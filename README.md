@@ -73,8 +73,8 @@ unzip FluidNexusBall.zip
 # unzip FluidNexusBallAll.zip
 # unzip FluidNexusBallAllRaw.zip
 unzip FluidNexusSmoke.zip
-unzip FluidNexusSmokeAll.zip
-unzip FluidNexusSmokeAllRaw.zip
+# unzip FluidNexusSmokeAll.zip
+# unzip FluidNexusSmokeAllRaw.zip
 unzip ScalarReal.zip
 
 mv FluidNexusBall /path/to/FluidNexusRoot
