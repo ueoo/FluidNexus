@@ -57,9 +57,17 @@ For **ScalarFlow**, please refer to the original [website](https://ge.in.tum.de/
 cd /path/to/FluidNexusRoot
 
 # Download FluidNexus-Smoke FluidNexus-Ball ScalarReal datasets from Hugging Face
-git clone https://huggingface.co/datasets/yuegao/FluidNexusDatasets
-
+# To use the full dataset, you can clone it directly from HF:
+# git clone https://huggingface.co/datasets/yuegao/FluidNexusDatasets
 cd FluidNexusDatasets
+# conda install -c conda-forge git-lfs
+# git lfs install
+# git lfs pull
+
+# If you only want to download the two without ‘All’, you can do so with:
+# wget https://huggingface.co/datasets/yuegao/FluidNexusDatasets/resolve/main/FluidNexusBall.zip?download=true
+# wget https://huggingface.co/datasets/yuegao/FluidNexusDatasets/resolve/main/FluidNexusSmoke.zip?download=true
+
 
 unzip FluidNexusBall.zip
 # unzip FluidNexusBallAll.zip
