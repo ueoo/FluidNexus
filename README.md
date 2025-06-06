@@ -79,12 +79,15 @@ mv ScalarReal /path/to/FluidNexusRoot
 
 ### Frame-wise Novel View Synthesis
 
-#### 1. Convert the frames to Zero123 input frames
+#### 1. Convert the frames to Zero123 input frames and create the cameras
 
 ```shell
 cd /path/to/FluidNexusRoot/FluidNexus/DataProcessing
 
 python convert_original_to_zero123.py
+
+# note: update the dataset_name in create_zero123_cams.py first
+python create_zero123_cams.py
 ```
 
 #### 2. Download the pretrained Zero123 and CogVideoX models

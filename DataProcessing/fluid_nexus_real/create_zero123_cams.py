@@ -17,11 +17,13 @@ def get_w2c_RT_from_c2w(c2w):
 
 dataset_name = "FluidNexusSmoke"
 # dataset_name = "FluidNexusBall"
+# dataset_name = "FluidNexusSmokeAll"
+# dataset_name = "FluidNexusBallAll"
 
 project_root = "/path/to/FluidNexusRoot"
-real_capture_data_root = f"{project_root}/{dataset_name}All"
-info_json_path = f"{real_capture_data_root}/transforms.json"
-zero123_dataset_path = f"{real_capture_data_root}/zero123_dataset"
+dataset_root = f"{project_root}/{dataset_name}"
+info_json_path = f"{dataset_root}/transforms.json"
+zero123_dataset_path = f"{dataset_root}/zero123_dataset"
 
 # camera_path = os.path.join(zero123_dataset_path, f"camera_{run_id}")
 camera_path = os.path.join(zero123_dataset_path, f"camera")
