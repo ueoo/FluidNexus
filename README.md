@@ -49,6 +49,7 @@ Our **FluidNexus-Smoke** and **FluidNexus-Ball** datasets each include 120 scene
 * **FluidNexusSmoke** and **FluidNexusBall**: Processed datasets containing one example sample used in our paper.
 * **FluidNexusSmokeAll** and **FluidNexusBallAll**: All samples processed into frames, usable within the FluidNexus framework.
 * **FluidNexusSmokeAllRaw** and **FluidNexusBallAllRaw**: Raw videos of all samples as originally captured.
+>  For a quick start, just download either FluidNexusSmoke or FluidNexusBall. The ones labeled ‘All’ contain all the datasets we collected; you should use them only if you want to finetune Zero123 or CogVideo-X, or perform a thorough evaluation on the entire dataset.
 
 For **ScalarFlow**, please refer to the original [website](https://ge.in.tum.de/publications/2019-scalarflow-eckert/).
 
@@ -61,19 +62,19 @@ git clone https://huggingface.co/datasets/yuegao/FluidNexusDatasets
 cd FluidNexusDatasets
 
 unzip FluidNexusBall.zip
-unzip FluidNexusBallAll.zip
-unzip FluidNexusBallAllRaw.zip
+# unzip FluidNexusBallAll.zip
+# unzip FluidNexusBallAllRaw.zip
 unzip FluidNexusSmoke.zip
 unzip FluidNexusSmokeAll.zip
 unzip FluidNexusSmokeAllRaw.zip
 unzip ScalarReal.zip
 
 mv FluidNexusBall /path/to/FluidNexusRoot
-mv FluidNexusBallAll /path/to/FluidNexusRoot
-mv FluidNexusBallAllRaw /path/to/FluidNexusRoot
+# mv FluidNexusBallAll /path/to/FluidNexusRoot
+# mv FluidNexusBallAllRaw /path/to/FluidNexusRoot
 mv FluidNexusSmoke /path/to/FluidNexusRoot
-mv FluidNexusSmokeAll /path/to/FluidNexusRoot
-mv FluidNexusSmokeAllRaw /path/to/FluidNexusRoot
+# mv FluidNexusSmokeAll /path/to/FluidNexusRoot
+# mv FluidNexusSmokeAllRaw /path/to/FluidNexusRoot
 mv ScalarReal /path/to/FluidNexusRoot
 ```
 
