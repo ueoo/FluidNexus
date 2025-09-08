@@ -26,6 +26,26 @@ body {
   font-family: "Google Sans", sans-serif;
 }
 
+/* Keep chunks glued together */
+.no-break {
+  white-space: nowrap;
+}
+
+/* Small screens: allow break after ":" */
+.publication-title wbr {
+  display: inline;
+}
+
+/* Large screens: force break after "Prediction" instead */
+@media (min-width: 800px) {
+  .publication-title .no-break:first-of-type::after {
+    content: "\A";   /* insert a line break */
+    white-space: pre;
+  }
+  .publication-title wbr {
+    display: none;   /* suppress earlier break */
+  }
+}
 /*
 .publication-title {} */
 
