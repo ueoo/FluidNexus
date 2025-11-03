@@ -7,7 +7,7 @@
 [![Hugging Face Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-orange)](https://huggingface.co/datasets/yuegao/FluidNexusDatasets)
 [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-gold)](https://huggingface.co/yuegao/FluidNexusModels)
 
-[**Yue Gao**\*](https://yuegao.me/), [**Hong-Xing "Koven" Yu**\*](https://kovenyu.com/), [**Bo Zhu**](https://faculty.cc.gatech.edu/~bozhu/), [**Jiajun Wu**](https://jiajunwu.com/)
+[**Yue Gao**\*](https://yuegao.me/), [**Hong-Xing (Koven) Yu**\*](https://kovenyu.com/), [**Bo Zhu**](https://faculty.cc.gatech.edu/~bozhu/), [**Jiajun Wu**](https://jiajunwu.com/)
 
 [Stanford University](https://svl.stanford.edu/); [Microsoft](https://microsoft.com/); [Georgia Institute of Technology](https://www.gatech.edu/)
 
