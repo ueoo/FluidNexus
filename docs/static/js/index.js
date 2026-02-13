@@ -19,6 +19,13 @@ $(document).ready(function () {
 
 // Wait until the DOM is fully loaded (optional but recommended)
 document.addEventListener("DOMContentLoaded", () => {
+  // iOS Safari safeguard: enforce inline playback on all videos.
+  document.querySelectorAll("video").forEach((video) => {
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.playsInline = true;
+  });
+
   const toggleResim = document.getElementById("toggle-resim");
   const resimContent = document.getElementById("resim-content");
 
